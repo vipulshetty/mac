@@ -1,0 +1,16 @@
+
+name: Test macOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check macOS environment
+        run: |
+          sw_vers
+          uname -a
+          system_profiler SPHardwareDataType
